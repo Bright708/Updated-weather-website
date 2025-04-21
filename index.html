@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Checker</title>
     <link rel="stylesheet" href="style.css">
+    <script defer src="./main.js"></script>
 </head>
 <body>
   <div class="card">
@@ -13,30 +14,29 @@
         <button id="btn"><img src="./images/search.png" ></button>
     </div>
     <div class="weather">
-        <h1>16°c</h1>
+        <h1 id="citytemp">16°c</h1>
       <div>
-        <h2>London</h2>
-        <p>6:09-Monday,9 Sep 23</p>
+        <h2 id="cityname">London</h2>
       </div> 
-        <img src="./images/clear.png" >
+        <img id="weatherimg" src="./images/clear.png" >
     </div>
     <div class="weather-details">
         <h2>Weather Details</h2>
-        <h1>THUNDERSTORM WITH LIGHT DRIZZLE</h1>
+        <h1 id="weatherdescription">THUNDERSTORM WITH LIGHT DRIZZLE</h1>
         <section>
             <div class="details_name">
-                <p>Temp max</p>
-                <p>Temp min</p>
-                <p>Humidity</p>
-                <p>Cloudy</p>
-                <p>Wind</p>
+                <p >Temp max</p>
+                <p >Temp min</p>
+                <p >Humidity</p>
+                <p >Cloudy</p>
+                <p >Wind</p>
             </div>
             <div class="details_figures">
-                <p>19° <img src="./images/Temp max.jpg" ></p>
-                <p>16° <img src="./images/temp min.jpg"></p>
-                <p>58% <img src="./images/humidity.png"></p>
-                <p>86% <img src="./images/clouds.png" ></p>
-                <p>5 km/h <img src="./images/wind.png" ></p>
+                <p id="Temp_max">19° <img src="./images/Temp max.jpg" ></p>
+                <p id="Temp_min">16° <img src="./images/temp min.jpg"></p>
+                <p id="Humidity">58% <img src="./images/humidity.png"></p>
+                <p id="Cloudy">86% <img src="./images/clouds.png" ></p>
+                <p id="Wind">5 km/h <img src="./images/wind.png" ></p>
             </div>
         </section>
 
