@@ -6,6 +6,7 @@ async function getWeather(city){
     let weatherIcon=document.querySelector(".weather img")
     const response=await fetch(`${apiUrl}&q=${city}&appid=${apiKey}`)
     const data=await response.json();
+  
     document.getElementById("cityname").innerHTML=data.name;
     document.getElementById("citytemp").innerHTML=Math.round(data.main.temp)+"°c";
     document.getElementById("weatherdescription").innerHTML=data.weather[0].description;
@@ -14,6 +15,7 @@ async function getWeather(city){
     document.getElementById("Humidity").innerHTML=data.main.humidity+"%";
     document.getElementById("Cloudy").innerHTML=data.clouds.all+"%";
     document.getElementById("Wind").innerHTML=data.wind.speed+" km/h";
+    setInterval(()=>{document.getElementById("citydate").innerHTML=new Date();
     if(data.weather[0].main=="Clouds"){
         weatherIcon.src="./images/clouds.png";
     }else if(data.weather[0].main=="Clear"){
@@ -28,7 +30,9 @@ async function getWeather(city){
         weatherIcon.src="./images/mist.png";
     }else if(data.weather[0].main=="Drizzle"){
         weatherIcon.src="./images/drizzle.png";}
-        console.log(data);
+      
+    }
+    ,1000)
     
    
 
