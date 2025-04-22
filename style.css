@@ -10,11 +10,12 @@ body{
 }
 .card{
     width: 100%;
+    
     min-height: 100vh;
     height: 100%;
     background: url(./images/Background.jpg);
     background-repeat: repeat;
-    background-size: contain;
+    background-size: 100% ;
     color: white;
 
 }
@@ -27,6 +28,10 @@ body{
     position: absolute;
     right: 1.5rem;
     background: transparent;
+
+}
+.card #srch:focus{
+  background: transparent;
 
 }
 .card #srch::placeholder{
@@ -87,7 +92,9 @@ font-weight: lighter;
 .weather h2{
 font-size: 2rem;
 font-weight: lighter;
+
 }
+
 .weather p{
 font-size: 0.8rem;
 font-weight: lighter;
@@ -139,6 +146,62 @@ justify-content:space-between;
 .weather-details section img{
     width: 13px;
     height: 13px;
+    position: absolute;
+  
+
+}
+@media screen and (min-width:935px) {
+
+    .card{
+        position: fixed;
+        width: 100%;
+        min-height: 100vh;
+        height: 100%;
+        background: url(./images/tree-desert-white-clouds-daytime.jpg);
+        background-size: 100% 100%;
+      
+    }
+    .weather{
+        align-items: center;
+        position: relative; 
+    }
+    .weather h1{
+  font-size: 4rem;
+  
+    }
+    .weather h2{
+  font-size: 4rem;
+
+    }
+    .weather p{
+  font-size: 1.5rem;
+
+    }
+    .weather-details section{
+        justify-content: space-around;
+        font-size: 1.5;
+    }
+    .card #srch{
+    
+        height: 3rem;
+        font-size: 1.3rem;
+    
+    }
+    .card #search{
+        right: 2rem;
+    }
+    .card #btn{
+        top: 1rem;
+        height: 55px;
+        width: 55px;
+    }
+    .card #btn img{
+        height: 40px;
+        width: 40px;
+    }
+    
+
+    
 }
 
 
